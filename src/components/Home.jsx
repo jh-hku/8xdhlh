@@ -1,11 +1,11 @@
-import './App.css';
+import '../App.css';
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 
 class Home extends React.Component {
     render() {
         return (
-            <div className="App">
+            <div className="Home">
                 <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>

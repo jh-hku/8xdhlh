@@ -1,38 +1,21 @@
 import "./App.css";
 import React from "react";
-import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
-import About from "./About";
-import Home from "./Home";
+import { Route, Routes } from "react-router-dom";
+import About from "./components/About";
+// import Careers from "./routes/Careers";
+import Home from "./components/Home";
+import Menu from './Navbar';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <div>
-          <nav>
-            <ul id="navigation">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="about/" element={<About />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        {/* <Route path="/careers" element={<Careers />} />  */}
+      </Routes>
+    </>
+  );
 }
-
 export default App;

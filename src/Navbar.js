@@ -22,9 +22,9 @@ function Menu() {
             <NavLink as={Link} to="">
               Home
             </NavLink>
-            <NavLink as={Link} to="about">
+            <Nav.Link href="/about">
               Features
-            </NavLink>
+            </Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>

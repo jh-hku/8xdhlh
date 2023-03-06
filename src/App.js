@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Route, Routes, Outlet } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes, Outlet } from "react-router-dom";
 import About from "./components/About";
 // import Careers from "./routes/Careers";
 import Home from "./components/Home";
@@ -12,14 +12,14 @@ import logo from "./logo.svg";
 
 export default function App() {
   return (
-    <>
+    <HashRouter> 
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route path="" element={<Home />} />
           <Route path="about" element={<About />} />
         </Route>
       </Routes>
-    </>
+    </HashRouter>
   );
 }
 
@@ -39,10 +39,8 @@ function Layout() {
             React Bootstrap
           </Navbar.Brand>
           <Nav className="me-auto">
-            <NavLink as={Link} to="">
-              Home
-            </NavLink>
-            <Nav.Link href="/about">Features</Nav.Link>
+            <Nav.Link as={Link} to="">Home</Nav.Link>
+            <Nav.Link as={Link} to="about">Features</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>

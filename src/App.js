@@ -30,7 +30,7 @@ function Layout() {
     justifyContent: "center",
   };
   return (
-    <div class="bg-dark container-fluid" style={{ height: "100vh" }}>
+    <div class="bg-dark" style={{ height: "100vh" }}>
       <Navbar bg="dark" variant="dark" width="100%">
         <Container>
           <Navbar.Brand href="/">
@@ -57,10 +57,11 @@ function Layout() {
       </Navbar>
 
       <Outlet />
-
+    
       <footer class="bg-dark text-center text-white" width="100">
+        <br></br>
         <div
-          class="display-flex flex-items-center flex-content-between padding-y-lg padding-right-5xl padding-left-4xl laptop:padding-right-4xl laptop:padding-left-4xl desktop:padding-right-5xl desktop:padding-left-4xl"
+          class="display-flex flex-items-center flex-content-between"
         >
           <section class="mb-4">
             <Button
@@ -95,7 +96,7 @@ function Layout() {
           </section>
         </div>
 
-        <div class="text-center p-3">© 2023 Copyright: Studio8</div>
+        {/* <div class="text-center p-3">© 2023 Copyright: Studio8</div> */}
       </footer>
     </div>
   );

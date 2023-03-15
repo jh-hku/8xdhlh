@@ -1,0 +1,233 @@
+import React from "react";
+import { Accordion } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Stack from "react-bootstrap/Stack";
+import Badge from "react-bootstrap/Badge";
+import ListGroup from "react-bootstrap/ListGroup";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+const divStyle = {
+  color: "white",
+};
+
+class About extends React.Component {
+  render() {
+    return (
+      <Stack className="bg-dark">
+        <div style={{ height: 20 }}></div>
+        <Card className="col-md-5 mx-auto" style={{ width: "95%" }}>
+          <Card.Body className="m-4">
+            <Card.Img
+              // variant="top"
+              src="https://media.licdn.com/dms/image/C4D16AQEuUNMsYGJnEg/profile-displaybackgroundimage-shrink_350_1400/0/1655447075725?e=1683763200&v=beta&t=SZ5H8CgN-GlKlvwZhLYUK9gn-gEY41SNWum051lRd3s"
+            />
+            <Card.Title className="my-4" style={{ fontSize: 36 }}>
+              <h1 class="display-1">JUSTIN HOM</h1>
+            </Card.Title>
+
+            <hr className="my-4" />
+
+            <Container>
+              <Row>
+                <Col xs={7}>
+                  <h3 className="my-3">
+                    <strong>About</strong>
+                  </h3>
+                  <p align="justify" className="my-3">
+                    An agile final year engineering student seeking an
+                    opportunity to gear up with experience. Experienced team
+                    player and leader, but also a self-motivated and adaptable
+                    person. Ambitious and innovative, with confidence to solve
+                    challenging tasks and develop new products.
+                  </p>
+
+                  <hr className="my-4" />
+
+                  <h3 className="my-3">
+                    <strong>Working Experience</strong>
+                  </h3>
+                  <Card border="dark">
+                    <Card.Header>
+                      <div className="d-flex justify-content-between fw-bold">
+                        <div class="p-2">Morgan Stanley</div>
+                        <div class="p-2">Jun - Aug 2022</div>
+                      </div>
+                    </Card.Header>
+                    <Card.Body>
+                      <Card.Title>Technology Summer Analyst</Card.Title>
+                      <Card.Text>
+                        Worked under Cyber Data Risk & Resilience (Enterprise
+                        Security Platforms)
+                      </Card.Text>
+                      <ListGroup className="list-group-flush">
+                        <ListGroup.Item>
+                          Developed tools and a cloud-based web application to
+                          enhance network security in the firm
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          Hands-on experience included development of REST API
+                          and MongoDB; CI/CD, containers, CaC
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          Received insights and practical knowledge on
+                          cybersecurity and its implementation through
+                          networking sessions
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          Completed several presentations and product
+                          demonstrations Member of Interns Social Committee;
+                          helped connect technology interns within the batch
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          Got featured on official Instagram in a highlight
+                          video as a representative of 2022 Asia interns
+                        </ListGroup.Item>
+                      </ListGroup>
+                    </Card.Body>
+                  </Card>
+                  <br />
+                  <Card border="dark">
+                    <Card.Header>
+                      <div className="d-flex justify-content-between fw-bold">
+                        <div class="p-2">Siemens</div>
+                        <div class="p-2">Jun - Aug 2021</div>
+                      </div>
+                    </Card.Header>
+                    <Card.Body>
+                      <Card.Title>Summer Intern</Card.Title>
+                      <Card.Text></Card.Text>
+                      <ListGroup className="list-group-flush">
+                        <ListGroup.Item>
+                          Conducted research on IoT technologies and LoRa
+                          development; Assisted in IoT projects with EMSD
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          Designed a mobile application prototype according to
+                          client requirements
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          {" "}
+                          Edited schematic drawings using AutoCAD
+                        </ListGroup.Item>
+                      </ListGroup>
+                    </Card.Body>
+                  </Card>
+                  <br />
+
+                  <hr className="my-4" />
+
+                  <h3 className="my-3">
+                    <strong>Other Experience</strong>
+                  </h3>
+                  <Accordion>
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>
+                        Internal Vice-chairperson, HKU Computer Science
+                        Association
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <li>Restarted and represented the association;</li>
+                        <li>
+                          In-charge of all internal and external association
+                          events PIC of CSA Orientation 2022 and CSA Career Week
+                          2022
+                        </li>
+                        <li>Designed society products to be sold</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+                  <Accordion>
+                    <Accordion.Item eventKey="1">
+                      <Accordion.Header>
+                        Committee Member, HKIESC-HKU
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <li>
+                          Event planning, management and host of internal and
+                          external events; Meet regularly with President of HKIE
+                        </li>
+                        <li>
+                          Organized HKIE Join Student Chapters Case Competition
+                          2022
+                        </li>
+                        <li>
+                          Managed homepages and communications on social media
+                          platforms
+                        </li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+                  <Accordion>
+                    <Accordion.Item eventKey="2">
+                      <Accordion.Header>Miscellaneous</Accordion.Header>
+                      <Accordion.Body>
+                        <li>
+                          Volunteered as Peer Mentor for academic year 2021-2022
+                        </li>
+                        <li>
+                          Organizing Committee of 2019 Engineering Society
+                          Welfare Week
+                        </li>
+                        <li>
+                          Team captain of Hall Squash Team and Dance Club; Won
+                          Champion in Inter-hall squash competitions; Member of
+                          Inter-hall Mass Dance Team
+                        </li>
+                        <li>
+                          Chief Group Leader of Hall Orientation; PIC of
+                          Publications and Hall Decorations Sub-committee
+                        </li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+
+                  <hr className="my-4" />
+
+                  <h3 className="my-3">
+                    <strong>Skills</strong>
+                  </h3>
+                  <div className="mx-auto" style={{ width: "95%" }}>
+                    <h5>Web Development</h5>
+                    <Badge pill bg="info">
+                      Flask
+                    </Badge>{" "}
+                    <Badge pill bg="secondary">
+                      React.js
+                    </Badge>
+                  </div>
+
+                  <hr className="my-4" />
+
+                  <h3 className="my-3">
+                    <strong>Interests</strong>
+                  </h3>
+                  <div className="mx-auto" style={{ width: "95%" }}>
+                    <h6>Coding</h6>
+                    <h6>Composing</h6>
+                    <h6>Dancing</h6>
+                    <h6>Designing</h6>
+                    <h6>Guitar & Piano</h6>
+                    <h6>Squash</h6>
+                  </div>
+                </Col>
+
+                <Col>
+                  <h3 className="my-3">
+                    <strong>Contact</strong>
+                  </h3>
+                </Col>
+              </Row>
+
+              <hr className="my-4" />
+            </Container>
+          </Card.Body>
+        </Card>
+        <br />
+      </Stack>
+    );
+  }
+}
+
+export default About;

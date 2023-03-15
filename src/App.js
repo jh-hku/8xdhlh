@@ -1,8 +1,9 @@
 import "./App.css";
 import React from "react";
 import { HashRouter, Route, Routes, Outlet } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Studio from "./pages/Studio";
 
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route path="" element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="studio" element={<Studio />} />
         </Route>
       </Routes>
     </HashRouter>
@@ -25,10 +27,6 @@ export default function App() {
 }
 
 function Layout() {
-  const buttonStyle = {
-    borderRadius: 100,
-    justifyContent: "center",
-  };
   return (
     <div class="bg-dark" style={{ height: "100vh" }}>
       <Navbar bg="dark" variant="dark" width="100%">
@@ -51,7 +49,9 @@ function Layout() {
             <Nav.Link as={Link} to="about">
               About
             </Nav.Link>
-            {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
+            <Nav.Link as={Link} to="studio">
+              Studio
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>

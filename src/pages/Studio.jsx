@@ -12,8 +12,14 @@ class Studio extends React.Component {
             <Row xs={2} md={2} className="g-4">
               <Col>
                 <Post
-                  img={["https://picsum.photos/id/54/400/300"]}
-                  title="Test"
+                  img={["https://drive.google.com/uc?id=1g74eAGtLhGA4c8ZwPwYWoQo68joR1qxz", "https://drive.google.com/uc?id=1MnVItPrZtwcdhWSdQmqcuPAqt0RukZHH","https://drive.google.com/uc?id=1EOXX110KKJxPHOF17xt306kOXlTvaIRW"]}
+                  title="HKU CSA Society Products"
+                  content="Full version of 2023 Newsletter can be found here: https://i.cs.hku.hk/~csa/Newsletter/2023-02.pdf"
+                />
+                <Post
+                  img={["https://drive.google.com/uc?id=19YH-YGT-bp5HU81vOaQj4EEn6J79dpNi", "https://drive.google.com/uc?id=1cgA_6oZvIx9WYoVZf4JsALePlpS6HfNs","https://drive.google.com/uc?id=1nXs8Kc-Zv10u2qm7UxHE6CDd7o_78yx-", "https://drive.google.com/uc?id=1jJqtrHjY3VTGkYl3R9LMk2BB-7RtiIZU"]}
+                  title="RC Squash Team"
+                  content="Tee Design"
                 />
               </Col>
               <Col>

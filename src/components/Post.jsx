@@ -1,6 +1,6 @@
 import "./Post.css";
 import React from "react";
-import { Card, Modal, Carousel } from "react-bootstrap";
+import { Card, Modal, Carousel, Container } from "react-bootstrap";
 
 function PostModal(props) {
   return (
@@ -16,17 +16,19 @@ function PostModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Carousel>
-          {props.img.map((url) => {
-            return (
-              <Carousel.Item>
-                <img className="d-block w-100" src={url} alt=""/>
-              </Carousel.Item>
-            );
-          })}
-        </Carousel>
-        <br />
-        <p>{props.content}</p>
+        <Container>
+          <Carousel variant="dark" className="h-95">
+            {props.img.map((url) => {
+              return (
+                <Carousel.Item>
+                  <img className="d-block w-100" src={url} alt="" />
+                </Carousel.Item>
+              );
+            })}
+          </Carousel>
+          <br />
+          <p>{props.content}</p>
+        </Container>
       </Modal.Body>
     </Modal>
   );
@@ -40,13 +42,13 @@ export default class Post extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="m-3">
         <Card
           className="rounded-4 border border-dark overflow-hidden hover-zoom"
           style={{ cursor: "pointer" }}
           onClick={() => this.setState({ showModal: true })}
         >
-          <Card.Img src={this.props.img[0]} className="rounded-4 " />
+          <Card.Img src={this.props.img[0]} className="rounded-4" />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
           </Card.Body>
@@ -59,7 +61,7 @@ export default class Post extends React.Component {
           show={this.state.showModal}
           onHide={() => this.setState({ showModal: false })}
         />
-      </>
+      </div>
     );
   }
 }

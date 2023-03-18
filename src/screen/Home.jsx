@@ -1,6 +1,7 @@
 // import "../App.css";
 import React from "react";
 import { Link } from "react-router-dom";
+import { Banner } from "../components/Banner";
 
 const divStyle = {
   background: "--bs-body-bg",
@@ -26,6 +27,7 @@ class Home extends React.Component {
       //     </header>
       // </div>
       <div class="bg-dark" style={divStyle}>
+        <Banner />
         <div class="bg-dark px-4 py-5 my-5 text-center text-secondary">
           <img
             class="d-block mx-auto mb-4"

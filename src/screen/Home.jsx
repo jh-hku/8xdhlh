@@ -1,7 +1,6 @@
 // import "../App.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../logo.svg";
 
 const divStyle = {
   background: "--bs-body-bg",

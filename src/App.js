@@ -1,16 +1,15 @@
-import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import { HashRouter, Route, Routes, Outlet } from "react-router-dom";
-import About from "./pages/About";
-import Home from "./pages/Home";
-import Studio from "./pages/Studio";
+import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
+import "./App.css";
+import About from "./screen/About";
+import Home from "./screen/Home";
+import Studio from "./screen/Studio";
 
-import Container from "react-bootstrap/Container";
+import { NavBar } from "./components/NavBar";
+
 import Button from "react-bootstrap/Button";
-import { Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import logo from "./logo.svg";
-import { FaFacebookF, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function App() {
   return (
@@ -29,40 +28,13 @@ export default function App() {
 function Layout() {
   return (
     <div class="bg-dark" style={{ height: "100vh" }}>
-      <Navbar bg="dark" variant="dark" width="100%">
-        <Container>
-          <Navbar.Brand href="/">
-            <img
-              alt=""
-              src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
-            {/* React Bootstrap */}
-            Justin Hom
-          </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="">
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="about">
-              About
-            </Nav.Link>
-            <Nav.Link as={Link} to="studio">
-              Studio
-            </Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <NavBar className="navbar"/>
 
       <Outlet />
-    
+
       <footer class="bg-dark text-center text-white" width="100">
         <br></br>
-        <div
-          class="display-flex flex-items-center flex-content-between"
-        >
+        <div class="display-flex flex-items-center flex-content-between">
           <section class="mb-4">
             <Button
               variant="outline-secondary"

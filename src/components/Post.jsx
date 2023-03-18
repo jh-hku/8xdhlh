@@ -1,6 +1,6 @@
-import "./Post.css";
+// import "./Post.css";
 import React from "react";
-import { Card, Modal, Carousel, Container } from "react-bootstrap";
+import { Card, Carousel, Container, Modal } from "react-bootstrap";
 
 function PostModal(props) {
   return (
@@ -42,7 +42,20 @@ export default class Post extends React.Component {
 
   render() {
     return (
-      <div className="m-3">
+      <div className="mx-2 my-4">
+        <style type="text/css">
+          {`.hover-zoom {
+          overflow: hidden;
+          transition: all 0.3s ease 0s;
+          width: 100%;
+        }
+
+        .hover-zoom:hover {
+          transform: scale(1.05);
+        }
+        `}
+        </style>
+
         <Card
           className="rounded-4 border border-dark overflow-hidden hover-zoom"
           style={{ cursor: "pointer" }}

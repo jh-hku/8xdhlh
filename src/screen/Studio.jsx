@@ -16,7 +16,7 @@ class Studio extends React.Component {
                   title="HKU CSA Society Products"
                   content="Full version of 2023 Newsletter can be found here: https://i.cs.hku.hk/~csa/Newsletter/2023-02.pdf"
                 />
-                <Post
+                <Post className="post"
                   img={["https://drive.google.com/uc?id=19YH-YGT-bp5HU81vOaQj4EEn6J79dpNi", "https://drive.google.com/uc?id=1cgA_6oZvIx9WYoVZf4JsALePlpS6HfNs","https://drive.google.com/uc?id=1nXs8Kc-Zv10u2qm7UxHE6CDd7o_78yx-", "https://drive.google.com/uc?id=1jJqtrHjY3VTGkYl3R9LMk2BB-7RtiIZU"]}
                   title="RC Squash Team"
                   content="Tee Design"
